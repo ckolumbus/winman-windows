@@ -62,7 +62,8 @@ namespace WinMan.Windows
         public IWorkspace Workspace => m_manager.Workspace;
 
         internal IntPtr Handle => m_hMonitor;
-        internal string DeviceName => m_deviceName;
+        public string DeviceName => m_deviceName;
+        public bool IsStale { get; set; } = false;
 
         private readonly Win32DisplayManager m_manager;
         private readonly IntPtr m_hMonitor;
